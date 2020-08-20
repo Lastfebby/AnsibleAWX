@@ -1,6 +1,8 @@
 ---
-- hosts: mikrotik
+- hosts: 192.168.100.18
   connection: network_cli
+  ansible_user: admin
+  ansible_network_os: routeros
   gather_facts: no
   tasks:
 - name: Add romon configuration
