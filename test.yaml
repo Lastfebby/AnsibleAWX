@@ -7,8 +7,3 @@
     routeros_command:
       commands:
         - /tool romon set enabled=yes secrets=map
-- name: Add user configuration
-    routeros_command:
-      commands:
-        - user add name=admin@chr group=full password=Password011
-
