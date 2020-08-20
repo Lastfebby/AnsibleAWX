@@ -1,11 +1,13 @@
 ---
 - hosts: 192.168.100.18
-  connection: network_cli
-  ansible_user: admin
   ansible_network_os: routeros
+  ansible_user: admin
+  connection: network_cli
   gather_facts: no
   tasks:
-- name: Add romon configuration
+  - name: Setup Interface name #rename interface fisik
     routeros_command:
       commands:
-        - /tool romon set enabled=yes secrets=map
+        - /interface set ether1 name=ether1-internet
+        - /interface set ether3 name=ether3-fortigate
+        - /interface set ether5 name=ether5-RVPN
