@@ -1,5 +1,5 @@
 ---
-- hosts: 192.168.100.18
+- hosts: mikrotik
   connection: network_cli
   gather_facts: no
   tasks:
